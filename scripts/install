@@ -8,6 +8,9 @@ VENV="venv"
 
 set -x
 
+# Temporarily install dependencies for building Pillow from source
+sudo apt-get install libjpeg8-dev
+
 if [ -z "$GITHUB_ACTIONS" ]; then
     "$PYTHON" -m venv "$VENV"
     PIP="$VENV/bin/pip"
