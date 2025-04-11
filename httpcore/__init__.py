@@ -139,5 +139,5 @@ for __name in __all__:
     if not __name.startswith("__"):
         try:
             setattr(__locals[__name], "__module__", "httpcore")  # noqa
-        except AttributeError:
+        except AttributeError:  # pragma: no cover
             pass
